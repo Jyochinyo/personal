@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <Menu></Menu>
+    <router-view class="routerView" />
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Menu from '@/components/menu/index.vue';
 
 @Options({
+  name: 'HomeView',
   components: {
-    HelloWorld,
-  },
+    Menu
+  }
 })
+
 export default class HomeView extends Vue {}
 </script>
+
+<style lang="less">
+.routerView {
+  width: 100%;
+  height: 100%;
+}
+</style>

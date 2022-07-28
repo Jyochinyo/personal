@@ -1,4 +1,4 @@
-# personal
+# vue3ts
 
 ## Project setup
 ```

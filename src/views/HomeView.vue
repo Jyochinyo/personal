@@ -1,27 +1,22 @@
 <template>
   <div class="home">
-    <Menu></Menu>
-    <router-view class="routerView" />
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld :msg="myName" @change="log"/>
+    <input type="text" v-model="myName">
+    <p @click="log">{{myName}}</p>
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import Menu from '@/components/menu/index.vue';
+<script lang="ts" setup>
+import { ref } from 'vue'
+import HelloWorld from '@/components/HelloWorld.vue'
 
-@Options({
-  name: 'HomeView',
-  components: {
-    Menu
-  }
-})
+/** 数据 data */
+const myName = ref('vue')
 
-export default class HomeView extends Vue {}
-</script>
-
-<style lang="less">
-.routerView {
-  width: 100%;
-  height: 100%;
+/** 方法 methods */
+const log = () => {
+  console.log(myName.value)
 }
-</style>
+
+</script>

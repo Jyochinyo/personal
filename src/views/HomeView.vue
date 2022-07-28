@@ -14,7 +14,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 const helloWorldRef = ref<any>(null)
 
 /** 数据 data */
-const myName = ref('vue')
+const myName = ref<string>('vue')
 
 /** 函数 methods */
 const log = () => {

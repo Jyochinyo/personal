@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, defineExpose } from 'vue'
 defineProps({
   msg: String
 })
@@ -15,22 +15,21 @@ const emitTest = () => {
   emit('change', 'value')
 }
 
+const sayHi = () => {
+  console.log('hi')
+}
+
+const childName = 'little'
+
+defineExpose({
+  sayHi,
+  childName
+})
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.hello {
+  color: lightgray;
 }
 </style>

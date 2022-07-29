@@ -4,13 +4,14 @@
     <HelloWorld ref="helloWorldRef" :msg="myName" @change="log"/>
     <input type="text" v-model="myName">
     <p @click="log">{{myName}}</p>
+    <router-view/>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
 /** 组件 component */
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from '@/components/helloWorld.vue'
 const helloWorldRef = ref<any>(null)
 
 /** 数据 data */

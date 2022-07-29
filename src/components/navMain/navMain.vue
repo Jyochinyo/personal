@@ -1,17 +1,13 @@
 <template>
-  <div class="home">
-    <navMain ref="navMainRef" />
-    <router-view/>
+  <div class="compContent">
+    123
   </div>
 </template>
 
 <script lang="ts" setup>
 /** 引入 import */
-import { ref } from 'vue'
 
 /** 组件 component */
-import navMain from '@/components/navMain/navMain.vue';
-const navMainRef = ref(null);
 
 /** 数据 data */
 // const myName = ref<string>('vue')
@@ -23,3 +19,10 @@ const navMainRef = ref(null);
 // }
 
 </script>
+
+<style scoped lang="less">
+.compContent {
+  color: lightgray;
+}
+
+</style>

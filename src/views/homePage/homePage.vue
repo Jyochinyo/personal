@@ -1,6 +1,7 @@
 <template>
   <div class="homePage">
     HomePage111 {{ t('Apple') }}
+    {{ $t('Apple') }}
   </div>
 </template>
 
@@ -8,6 +9,8 @@
 
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
+
+console.log('t', t('Apple'))
 
 </script>
 

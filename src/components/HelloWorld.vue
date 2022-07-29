@@ -5,7 +5,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits, defineExpose } from 'vue'
 defineProps({
   msg: String
 })

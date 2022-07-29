@@ -6,8 +6,11 @@ import store from './store'
 
 import i18n from './i18n'
 
-createApp(App)
-  .use(store)
+const app = createApp(App)
+
+app.config.globalProperties.$t = i18n
+
+app.use(store)
   .use(router)
   .use(i18n)
   .mount('#app')

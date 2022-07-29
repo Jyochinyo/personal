@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="homeView">
     <navMain ref="navMainRef" />
-    <router-view/>
+    <router-view class="routeView" />
   </div>
 </template>
 
@@ -23,3 +23,17 @@ const navMainRef = ref(null);
 // }
 
 </script>
+
+<style lang="less">
+.homeView {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .routeView {
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    margin-left: 125px;
+  }
+}
+</style>

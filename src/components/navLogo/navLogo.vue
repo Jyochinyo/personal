@@ -61,9 +61,8 @@ defineProps({
   position: absolute;
   left: 0;
   top: 85px;
-}
-
-svg, path {
-  transition: all 1s;
+  svg, path {
+    transition: all 1s;
+  }
 }
 </style>

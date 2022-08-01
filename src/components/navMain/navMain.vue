@@ -1,8 +1,8 @@
 <template>
   <div class="compContent">
     <div class="navContent" :class="[isMenuExpand ? 'expand' : 'collapse']">
-      <div class="logoBg">
-      </div>
+      <div class="logoBg"></div>
+      <NavLogo :isMenuExpand="isMenuExpand"></NavLogo>
       <div class="thumb" @click="toggleMenu">
         <div class="thumbOne"></div>
         <div class="thumbTwo"></div>
@@ -20,6 +20,7 @@ import { ref } from 'vue';
 /** 引入 import */
 
 /** 组件 component */
+import NavLogo from '../navLogo/navLogo.vue';
 
 /** 数据 data */
 const isMenuExpand = ref<boolean>(false);

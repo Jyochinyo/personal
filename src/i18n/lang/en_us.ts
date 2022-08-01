@@ -1,6 +1,6 @@
 export default {
   // A
-  Apple: 'Apple'
+  Apple: 'Apple',
   // B
   // C
   // D
@@ -8,6 +8,7 @@ export default {
   // F
   // G
   // H
+  Home: 'Home'
   // I
   // J
   // K

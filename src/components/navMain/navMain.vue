@@ -9,7 +9,7 @@
         <div class="thumbThree"></div>
       </div>
       <div class="menuList">
-        <a href="">HOME</a>
+        <span>{{ $t('Home')}}</span>
       </div>
     </div>
   </div>
@@ -35,7 +35,6 @@ const toggleMenu = () => {
 
 <style scoped lang="less">
 .compContent {
-  color: lightgray;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -44,31 +43,29 @@ const toggleMenu = () => {
   height: 100vh;
   padding: 30px;
   .navContent {
-    // background-color: red;
     width: 100%;
     height: 100%;
     position: relative;
     .logoBg {
       position: absolute;
-      background-color: #f5c300;
+      background-color: @color_theme;
       transform: translateZ(0);
       transition: all 0.5s;
     }
     .thumb {
+      .flex-column;
       cursor: pointer;
       height: 17px;
       width: 33px;
       outline: none;
       position: absolute;
-      display: flex;
-      flex-direction: column;
       justify-content: space-between;
       left: 16.5px;
       top: 155px;
       &>div {
         width: 100%;
         height: 3px;
-        background-color: black;
+        background-color: @basic_black;
         transition: all 0.5s;
         transform: translateX(0);
       }
@@ -78,13 +75,14 @@ const toggleMenu = () => {
       top: 148px;
       left: 74px;
       padding: 7px 0;
-      &>a {
+      width: 100px;
+      &>span {
         font-size: .85em;
         font-weight: 600;
         line-height: 1;
         padding: 7px 0;
-        color: #fff;
-        text-decoration: none;
+        color: @basic_white;
+        cursor: pointer;
       }
     }
   }
@@ -113,14 +111,14 @@ const toggleMenu = () => {
       top: 155px;
       .thumbOne {
         transform: rotate(45deg) translate3d(5px,5px,0);
-        background-color: #fff;
+        background-color: @basic_white;
       }
       .thumbTwo {
         opacity: 0;
       }
       .thumbThree {
         transform: rotate(-45deg) translate3d(5px,-5px,0);
-        background-color: #fff;
+        background-color: @basic_white;
       }
     }
   }

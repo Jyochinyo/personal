@@ -1,6 +1,6 @@
 export default {
   // A
-  Apple: '苹果'
+  Apple: '苹果',
   // B
   // C
   // D
@@ -8,6 +8,7 @@ export default {
   // F
   // G
   // H
+  Home: '首页'
   // I
   // J
   // K

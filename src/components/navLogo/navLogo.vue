@@ -1,7 +1,7 @@
 <template>
-  <div class="logoContent">
+  <div class="logoContent" :style="{ left: isMenuExpand ? '22px' : 0 }">
     <!-- 黑色logo -->
-    <svg style="display: none;" width="186" height="44" viewBox="0 0 186 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg :class="[y || isMenuExpand ? 'unTopB' : 'onTopB']" width="186" height="44" viewBox="0 0 186 44" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_2_17)">
         <!-- 椿洋 -->
         <path
@@ -23,7 +23,7 @@
       </defs>
     </svg>
     <!-- 白色logo -->
-    <svg width="186" height="44" viewBox="0 0 186 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg :class="[y || isMenuExpand ? 'unTopW' : 'onTopW']" width="186" height="44" viewBox="0 0 186 44" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_2_17)">
         <!-- 椿洋 -->
         <path
@@ -49,20 +49,47 @@
 </template>
 
 <script lang="ts" setup>
-// Props
+/** 引入 import */
+import { useWindowScroll } from '@vueuse/core'
+
+/** Props */
 defineProps({
   isMenuExpand: Boolean
 })
+
+/** 数据 data */
+const { y } = useWindowScroll()
 
 </script>
 
 <style scoped lang="less">
 .logoContent {
   position: absolute;
-  left: 0;
   top: 85px;
+  transition: all 0.5s;
+  transform: translateZ(0);
   svg, path {
-    transition: all 1s;
+    transition: all 0.5s;
+    transform: translateZ(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .unTopB {
+    opacity: 0;
+    left: 0;
+  }
+  .onTopB {
+    opacity: 1;
+    left: 100px;
+  }
+  .unTopW {
+    opacity: 1;
+    left: 0;
+  }
+  .onTopW {
+    opacity: 0;
+    left: 50px;
   }
 }
 </style>

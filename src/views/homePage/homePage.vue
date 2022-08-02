@@ -16,7 +16,7 @@ console.log('t', t('Apple'))
 
 <style scoped lang="less">
 .homePage {
-  color: lightgray;
+  color: red;
   font-size: 24px;
 }
 </style>

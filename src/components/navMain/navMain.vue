@@ -1,7 +1,7 @@
 <template>
   <div class="compContent">
     <div class="navContent" :class="[isMenuExpand ? 'expand' : 'collapse']">
-      <div class="logoBg"></div>
+      <div class="logoBg" :style="{ opacity: y || isMenuExpand ? 1 : 0}"></div>
       <NavLogo :isMenuExpand="isMenuExpand"></NavLogo>
       <div class="thumb" @click="toggleMenu">
         <div class="thumbOne"></div>
@@ -21,24 +21,29 @@
 /** 引入 import */
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useWindowScroll } from '@vueuse/core'
 
 /** 组件 component */
 import NavLogo from '../navLogo/navLogo.vue';
 
 /** 数据 data */
-const { locale } = useI18n();
 const isMenuExpand = ref<boolean>(false);
+const { y } = useWindowScroll()
 
 /** 函数 methods */
+const { locale } = useI18n();
+const emit = defineEmits(['menuExpand'])
+
+// 目录开关
 const toggleMenu = () => {
-  console.log('toggleMenu')
   isMenuExpand.value = !isMenuExpand.value
+  emit('menuExpand', isMenuExpand.value)
 }
 
+// 切换语言
 const changeLang = () => {
   const lang = locale.value === 'cn' ? 'en' : 'cn'
   locale.value = lang
-  console.log('changeLang:', lang)
   localStorage.setItem('locale', lang)
 }
 
@@ -83,9 +88,10 @@ const changeLang = () => {
     }
     .menuList {
       position: absolute;
-      top: 148px;
       left: 74px;
       margin: 7px 0;
+      transition: all 0.5s;
+      transform: translateX(0);
       &>span {
         font-size: .85em;
         font-weight: 600;
@@ -112,6 +118,7 @@ const changeLang = () => {
       }
     }
   }
+  // 目录关闭
   .collapse {
     .logoBg {
       left: 2px;
@@ -124,7 +131,13 @@ const changeLang = () => {
       left: 16.5px;
       top: 155px;
     }
+    .menuList {
+      visibility: hidden;
+      top: 128px;
+      opacity: 0;
+    }
   }
+  // 目录打开
   .expand {
     .logoBg {
       top: 0;
@@ -146,6 +159,11 @@ const changeLang = () => {
         transform: rotate(-45deg) translate3d(5px,-5px,0);
         background-color: @basic_white;
       }
+    }
+    .menuList {
+      visibility: unset;
+      top: 148px;
+      opacity: 1;
     }
   }
 }

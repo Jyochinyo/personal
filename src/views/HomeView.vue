@@ -1,7 +1,7 @@
 <template>
   <div class="homeView">
-    <navMain ref="navMainRef" />
-    <router-view class="routeView" />
+    <navMain ref="navMainRef" @menuExpand="menuExpand" />
+    <router-view class="routeView" :style="{transform: isMenuExpand ? 'translate3d(250px, 0, 0)' : 'translateX(0)'}" />
   </div>
 </template>
 
@@ -14,13 +14,12 @@ import navMain from '@/components/navMain/navMain.vue';
 const navMainRef = ref(null);
 
 /** 数据 data */
-// const myName = ref<string>('vue')
+const isMenuExpand = ref<boolean>(false);
 
 /** 函数 methods */
-// const log = () => {
-//   console.log(helloWorldRef.value?.childName)
-//   helloWorldRef.value?.sayHi()
-// }
+const menuExpand = (val: boolean) => {
+  isMenuExpand.value = val
+}
 
 </script>
 
@@ -31,9 +30,12 @@ const navMainRef = ref(null);
   justify-content: flex-start;
   .routeView {
     width: 100%;
-    height: 100%;
-    background-color: lightgreen;
     margin-left: 125px;
+    transition: all 0.5s;
+    padding-right: 60px;
+    // TODO 临时高度和背景色 后面要改
+    height: 120vh;
+    background-color: @basic_white;
   }
 }
 </style>

@@ -16,7 +16,7 @@ export default {
   // K
   // L
   // M
-  MoreThanF2E: '又岂止于前端。',
+  MoreThanF2E: '又岂止于前端',
   // N
   // O
   // P

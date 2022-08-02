@@ -7,6 +7,7 @@ export default {
   // D
   // E
   // F
+  F2EEngineer: '前端工程师，',
   // G
   // H
   Home: '首页',
@@ -15,6 +16,7 @@ export default {
   // K
   // L
   // M
+  MoreThanF2E: '又岂止于前端。',
   // N
   // O
   // P

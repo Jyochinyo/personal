@@ -1,22 +1,22 @@
 <template>
   <div class="homePage">
-    HomePage111 {{ t('Apple') }}
-    {{ $t('Apple') }}
+    <PageBanner></PageBanner>
   </div>
 </template>
 
 <script lang="ts" setup>
+/** 引入 import */
+/** 组件 component */
+import PageBanner from '@/components/pageBanner/pageBanner.vue';
 
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
-
-console.log('t', t('Apple'))
-
+/** Props */
+/** 数据 data */
+/** 函数 methods */
 </script>
 
 <style scoped lang="less">
 .homePage {
-  color: red;
-  font-size: 24px;
+  width: 100%;
+  height: 100%;
 }
 </style>

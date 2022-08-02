@@ -7,6 +7,7 @@ export default {
   // D
   // E
   // F
+  F2EEngineer: 'Front-end engineer',
   // G
   // H
   Home: 'Home',
@@ -15,6 +16,7 @@ export default {
   // K
   // L
   // M
+  MoreThanF2E: 'More than front-end',
   // N
   // O
   // P

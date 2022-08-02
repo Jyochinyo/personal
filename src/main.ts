@@ -7,7 +7,7 @@ import i18n from './i18n'
 
 const app = createApp(App)
 
-app.config.globalProperties.$t = i18n
+// app.config.globalProperties.$t = i18n
 
 app.use(store)
   .use(router)

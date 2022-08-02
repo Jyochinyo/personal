@@ -18,13 +18,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
 /** 引入 import */
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 /** 组件 component */
 import NavLogo from '../navLogo/navLogo.vue';
 
 /** 数据 data */
+const { locale } = useI18n();
 const isMenuExpand = ref<boolean>(false);
 
 /** 函数 methods */
@@ -34,7 +36,10 @@ const toggleMenu = () => {
 }
 
 const changeLang = () => {
-  console.log('changeLang')
+  const lang = locale.value === 'cn' ? 'en' : 'cn'
+  locale.value = lang
+  console.log('changeLang:', lang)
+  localStorage.setItem('locale', lang)
 }
 
 </script>

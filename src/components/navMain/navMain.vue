@@ -10,6 +10,8 @@
       </div>
       <div class="menuList">
         <span>{{ $t('Home')}}</span>
+        <span>{{ $t('Project')}}</span>
+        <span @click="changeLang">{{ $t('CnEn')}}</span>
       </div>
     </div>
   </div>
@@ -29,6 +31,10 @@ const isMenuExpand = ref<boolean>(false);
 const toggleMenu = () => {
   console.log('toggleMenu')
   isMenuExpand.value = !isMenuExpand.value
+}
+
+const changeLang = () => {
+  console.log('changeLang')
 }
 
 </script>
@@ -74,15 +80,30 @@ const toggleMenu = () => {
       position: absolute;
       top: 148px;
       left: 74px;
-      padding: 7px 0;
-      width: 100px;
+      margin: 7px 0;
       &>span {
         font-size: .85em;
         font-weight: 600;
         line-height: 1;
-        padding: 7px 0;
+        margin: 7px 0;
         color: @basic_white;
         cursor: pointer;
+        white-space: nowrap;
+        position: relative;
+        display: inline-block;
+        &::after {
+          bottom: 0;
+          content: "";
+          display: inline-block;
+          left: 0;
+          position: absolute;
+          transition: width .3s;
+          width: 0;
+          border-bottom: 2px solid @basic_white;
+        }
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }

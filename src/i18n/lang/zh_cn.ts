@@ -3,12 +3,13 @@ export default {
   Apple: '苹果',
   // B
   // C
+  CnEn: 'EN',
   // D
   // E
   // F
   // G
   // H
-  Home: '首页'
+  Home: '首页',
   // I
   // J
   // K
@@ -17,6 +18,7 @@ export default {
   // N
   // O
   // P
+  Project: '项目'
   // Q
   // R
   // S

@@ -1,7 +1,7 @@
 <template>
   <div class="homeView">
     <navMain ref="navMainRef" @menuExpand="menuExpand" />
-    <router-view class="routeView" :style="{transform: isMenuExpand ? 'translate3d(250px, 0, 0)' : 'translateX(0)'}" />
+    <router-view class="routeView" :style="{transform: isMenuExpandRef ? 'translate3d(250px, 0, 0)' : 'translateX(0)'}" />
   </div>
 </template>
 
@@ -14,11 +14,11 @@ import navMain from '@/components/navMain/navMain.vue';
 const navMainRef = ref(null);
 
 /** 数据 data */
-const isMenuExpand = ref<boolean>(false);
+const isMenuExpandRef = ref<boolean>(false);
 
 /** 函数 methods */
 const menuExpand = (val: boolean) => {
-  isMenuExpand.value = val
+  isMenuExpandRef.value = val
 }
 
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div class="compContent">
-    <div class="navContent" :class="[isMenuExpand ? 'expand' : 'collapse']">
-      <div class="logoBg" :style="{ opacity: y || isMenuExpand ? 1 : 0}"></div>
-      <NavLogo :isMenuExpand="isMenuExpand"></NavLogo>
+    <div class="navContent" :class="[isMenuExpandRef ? 'expand' : 'collapse']">
+      <div class="logoBg" :style="{ opacity: y || isMenuExpandRef ? 1 : 0}"></div>
+      <NavLogo :isMenuExpand="isMenuExpandRef"></NavLogo>
       <div class="thumb" @click="toggleMenu">
         <div class="thumbOne"></div>
         <div class="thumbTwo"></div>
@@ -27,7 +27,7 @@ import { useWindowScroll } from '@vueuse/core'
 import NavLogo from '../navLogo/navLogo.vue';
 
 /** 数据 data */
-const isMenuExpand = ref<boolean>(false);
+const isMenuExpandRef = ref<boolean>(false);
 const { y } = useWindowScroll()
 
 /** 函数 methods */
@@ -36,8 +36,8 @@ const emit = defineEmits(['menuExpand'])
 
 // 目录开关
 const toggleMenu = () => {
-  isMenuExpand.value = !isMenuExpand.value
-  emit('menuExpand', isMenuExpand.value)
+  isMenuExpandRef.value = !isMenuExpandRef.value
+  emit('menuExpand', isMenuExpandRef.value)
 }
 
 // 切换语言

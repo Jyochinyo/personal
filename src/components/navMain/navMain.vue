@@ -1,7 +1,7 @@
 <template>
   <div class="compContent">
     <div class="navContent" :class="[isMenuExpandRef ? 'expand' : 'collapse']">
-      <div class="logoBg" :style="{ opacity: y || isMenuExpandRef ? 1 : 0}"></div>
+      <div class="logoBg" :style="{ opacity: y || isMenuExpandRef ? 1 : 0 }"></div>
       <NavLogo :isMenuExpand="isMenuExpandRef"></NavLogo>
       <div class="thumb" @click="toggleMenu">
         <div class="thumbOne"></div>
@@ -9,9 +9,9 @@
         <div class="thumbThree"></div>
       </div>
       <div class="menuList">
-        <span>{{ $t('Home')}}</span>
-        <span>{{ $t('Project')}}</span>
-        <span @click="changeLang">{{ $t('CnEn')}}</span>
+        <span>{{ $t('Home') }}</span>
+        <span>{{ $t('Project') }}</span>
+        <span @click="changeLang">{{ $t('CnEn') }}</span>
       </div>
     </div>
   </div>

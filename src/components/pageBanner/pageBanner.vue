@@ -33,8 +33,7 @@
   .bannerUpper {
     width: 100%;
     grid-gap: 20px;
-    // background-color: hsla(0,0%,78%,.1);
-    background-color: lightgray;
+    background-color: hsla(0,0%,78%,.1);
     display: grid;
     grid-template-areas: ". text text text text text image image image image image image";
     grid-template-columns: repeat(12,1fr);

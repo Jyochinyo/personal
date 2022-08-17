@@ -1,6 +1,7 @@
 <template>
   <div class="homePage">
     <PageBanner></PageBanner>
+    <div class="pageBlock"></div>
   </div>
 </template>
 
@@ -18,5 +19,11 @@ import PageBanner from '@/components/pageBanner/pageBanner.vue';
 .homePage {
   width: 100%;
   height: 100%;
+}
+
+.pageBlock {
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
 }
 </style>

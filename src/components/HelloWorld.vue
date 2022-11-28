@@ -6,7 +6,11 @@
 
 <script lang="ts" setup>
 defineProps({
-  msg: String
+  msg: {
+    type: String,
+    default: '',
+    required: false
+  }
 })
 const emit = defineEmits(['change'])
 

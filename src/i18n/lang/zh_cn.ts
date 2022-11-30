@@ -18,13 +18,15 @@ export default {
   // M
   MoreThanF2E: '又岂止于前端',
   // N
+  NewReleases: '更多新品',
   // O
   // P
-  Project: '项目'
+  Project: '项目',
   // Q
   // R
   // S
   // T
+  TodayPick: '今日推荐'
   // U
   // V
   // W

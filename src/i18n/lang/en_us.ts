@@ -18,13 +18,15 @@ export default {
   // M
   MoreThanF2E: 'More than front-end',
   // N
+  NewReleases: 'New Releases',
   // O
   // P
-  Project: 'Project'
+  Project: 'Project',
   // Q
   // R
   // S
   // T
+  TodayPick: "Today's Pick"
   // U
   // V
   // W

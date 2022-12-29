@@ -1,102 +1,95 @@
 <template>
   <div class="cocktailPage">
-    <!-- <productCard class="productCard"></productCard> -->
-    <div @click="changeLang" class="icon-language"></div>
-    <p class="page-title">{{ $t('TodayPick') }}</p>
-    <div class="pick-card" >
-      <p class="card-title">龙舌兰日出</p>
-      <p class="card-subtitle">Tequila Sunrise</p>
-      <p class="slogan">由摇滚明星捧红的果味鸡尾酒</p>
-      <div class="detail-btn">
-        <svg class="trangle">
-          <polygon points="5,2 15,10 5,18" stroke="black" stroke-width="1" fill="black"></polygon>
-        </svg>
+    <div v-for="(itme, index) in listRef" :key="'cocktail' + index" class="row">
+      <div>
+        <div>
+          <span class="row-index">{{ index + 1 }}</span>
+        </div>
+        <p class="name">{{ itme.name }}</p>
+        <p class="type">{{ itme.spirituosity ? '含酒精' : '不含酒精' }}{{ itme.icy ? ' / 冰的' : '' }}</p>
       </div>
+      <div class="icon-arrow-right"></div>
     </div>
-    <p class="page-title">{{ $t('NewReleases') }}</p>
   </div>
 </template>
 
 <script lang="ts" setup>
 /** 引入 import */
-import { onMounted } from 'vue'
-import { useI18n } from 'vue-i18n';
+import { onMounted, ref } from 'vue';
+import axios from 'axios';
+
+interface cocktail {
+  name: string,
+  spirituosity: boolean,
+  icy: boolean
+}
+// import { useI18n } from 'vue-i18n';
 
 /** 组件 component */
 // import productCard from '@/components/productCard/productCard.vue';
 
 /** 数据 data */
 // const currLangRef = ref<string>('Cn')
-const { locale } = useI18n();
+// const { locale } = useI18n();
+const listRef = ref<[cocktail]>()
 
 /** 生命周期 */
 onMounted(() => {
   console.log('onMounted')
+  axios.get('/mock/cocktail.json').then(res => {
+    console.log('res', res.data)
+    listRef.value = res.data
+  })
 })
 
 /** 函数 methods */
 // 切换语言
-const changeLang = () => {
-  const lang = locale.value === 'cn' ? 'en' : 'cn'
-  locale.value = lang
-  localStorage.setItem('locale', lang)
-}
+// const changeLang = () => {
+//   const lang = locale.value === 'cn' ? 'en' : 'cn'
+//   locale.value = lang
+//   localStorage.setItem('locale', lang)
+// }
 
 </script>
 
 <style lang="less">
+@defaultFont: system-ui;
+@defaultColor: black;
+
 .cocktailPage {
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: rgb(201, 201, 199);
   position: relative;
   padding: 2rem;
-  .page-title {
-    color: #fff;
-    margin-top: 2rem;
-    font-size: 2.8rem;
-    font-weight: 500;
-    line-height: 3rem;
-    display: inline-block;
-  }
-  .pick-card {
-    background-color: #fff;
-    width: 90vw;
-    height: 90vw;
-    border-radius: 10%;
-    margin: 2rem auto;
-    padding: 2rem;
-    position: relative;
-    background-image: radial-gradient(70% 70% at right bottom, rgb(115, 225, 183), rgb(213, 213, 155), rgb(113, 91, 158), rgb(39, 34, 48));
-    .card-title {
-      color: #fff;
-      font-size: 3.2rem;
-      margin-bottom: 1rem;
+  .row {
+    height: 13.2rem;
+    padding: 1rem 0;
+    font-family: @defaultFont;
+    color: @defaultColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .row-index {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      font-family: @defaultFont;
+      color: @defaultColor;
+      font-weight: bold;
     }
-    .card-subtitle {
-      color: #fff;
-      font-size: 1.6rem;
+    .name {
+      font-size: 2.6rem;
+      line-height: 4.8rem;
+      font-weight: bold;
+      font-family: @defaultFont;
+      color: @defaultColor;
     }
-    .slogan {
-      margin-top: 2rem;
-      font-size: 1.6rem;
-      color: #fff;
-      word-break: break-word;
-      width: 70%;
+    .type {
+      font-size: 1.2rem;
+      line-height: 2.2rem;
     }
-    .detail-btn {
-      .flex-center;
-      position: absolute;
-      bottom: 4rem;
-      left: 2rem;
-      width: 7rem;
-      height: 7rem;
-      border-radius: 50%;
-      background-color: #fff;
-      .trangle{
-        width: 2rem;
-        height: 2rem;
-      }
+    .icon-arrow-right {
+      margin-top: 3.4rem;
     }
   }
 }

@@ -21,7 +21,8 @@ import axios from 'axios';
 interface cocktail {
   name: string,
   spirituosity: boolean,
-  icy: boolean
+  icy: boolean,
+  motto: string
 }
 // import { useI18n } from 'vue-i18n';
 
@@ -35,9 +36,7 @@ const listRef = ref<[cocktail]>()
 
 /** 生命周期 */
 onMounted(() => {
-  console.log('onMounted')
   axios.get('/mock/cocktail.json').then(res => {
-    console.log('res', res.data)
     listRef.value = res.data
   })
 })
@@ -58,7 +57,7 @@ onMounted(() => {
 
 .cocktailPage {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgb(201, 201, 199);
   position: relative;
   padding: 2rem;

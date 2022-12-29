@@ -2,11 +2,90 @@
   {
     "name": "Tequila Sunrise",
     "spirituosity": true,
-    "icy": true
+    "icy": true,
+    "motto": ""
   },
   {
     "name": "John Collins",
     "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Side Car",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "King’s Valley",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Cuba Libre",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Gimlet",
+    "spirituosity": true,
     "icy": true
+  },
+  {
+    "name": "Dry Martini",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Moscow Mule",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Mojito",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Whisky Sour",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Long Island Iced Tea",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "White Lady",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Gin tonic",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Brandy Sour",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
+  },
+  {
+    "name": "Between the Sheets",
+    "spirituosity": true,
+    "icy": true,
+    "motto": ""
   }
 ]

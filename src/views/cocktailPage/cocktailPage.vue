@@ -1,12 +1,13 @@
 <template>
   <div class="cocktailPage">
-    <div v-for="(itme, index) in listRef" :key="'cocktail' + index" class="row">
+    <div v-for="(item, index) in listRef" @click="rowSelect(item)" :key="'cocktail' + index" class="row">
       <div>
-        <div>
-          <span class="row-index">{{ index + 1 }}</span>
+        <div class="top">
+          <span class="row-index">{{ (index < 9 ? '0' : '') + (index + 1) }}</span>
+          <div class="icon-spirit" v-if="item.spirituosity"></div>
         </div>
-        <p class="name">{{ itme.name }}</p>
-        <p class="type">{{ itme.spirituosity ? '含酒精' : '不含酒精' }}{{ itme.icy ? ' / 冰的' : '' }}</p>
+        <p class="name">{{ item.name }}</p>
+        <p class="type">{{ item.motto }}</p>
       </div>
       <div class="icon-arrow-right"></div>
     </div>
@@ -16,7 +17,9 @@
 <script lang="ts" setup>
 /** 引入 import */
 import { onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router'
 import axios from 'axios';
+const router = useRouter()
 
 interface cocktail {
   name: string,
@@ -48,6 +51,13 @@ onMounted(() => {
 //   locale.value = lang
 //   localStorage.setItem('locale', lang)
 // }
+// 选择鸡尾酒
+const rowSelect = (item: cocktail) => {
+  router.push({
+    name: 'cocktailInfo',
+    params: JSON.parse(JSON.stringify(item))
+  })
+}
 
 </script>
 
@@ -69,6 +79,14 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    .top {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &>div {
+        margin-left: 0.4rem;
+      }
+    }
     .row-index {
       font-size: 1.2rem;
       line-height: 1.6rem;

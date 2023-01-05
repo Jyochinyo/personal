@@ -26,7 +26,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/cocktailPage/cocktailPage.vue')
   },
   {
-    path: '/cocktailInfo',
+    path: '/cocktailInfo/:id',
     name: 'cocktailInfo',
     component: () => import('../views/cocktailDetail/cocktailDetail.vue')
   }

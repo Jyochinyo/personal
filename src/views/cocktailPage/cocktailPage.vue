@@ -18,15 +18,17 @@
 /** 引入 import */
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router'
+import { cocktail } from './../../model/cocktail/index'
 import axios from 'axios';
 const router = useRouter()
 
-interface cocktail {
-  name: string,
-  spirituosity: boolean,
-  icy: boolean,
-  motto: string
-}
+// interface cocktail {
+//   id: number,
+//   name: string,
+//   spirituosity: boolean,
+//   icy: boolean,
+//   motto: string
+// }
 // import { useI18n } from 'vue-i18n';
 
 /** 组件 component */

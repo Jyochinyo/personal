@@ -21,7 +21,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "禁酒令时期最流行的鸡尾酒之一",
-    "ingredient": []
+    "ingredient": [8, 9, 6]
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "新垣结衣都爱不释手的鸡尾酒",
-    "ingredient": []
+    "ingredient": [10, 11, 12, 6]
   },
   {
     "id": 5,

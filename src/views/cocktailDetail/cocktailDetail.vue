@@ -11,16 +11,18 @@
       <p class="ingredient">{{ item.cn }}</p>
       <p class="ingredient">{{ item.en }}</p>
     </div>
+    <div @click="router.back()" class="icon-arrow-left backIcon"></div>
   </div>
 </template>
 
 <script lang="ts" setup>
 /** 引入 import */
 import { onMounted, ref } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { cocktail, ingredient } from './../../model/cocktail/index'
 import axios from 'axios';
 const route = JSON.parse(JSON.stringify(useRoute()))
+const router = useRouter()
 
 /** 组件 component */
 
@@ -68,6 +70,11 @@ const getIngredients = () => {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  .backIcon {
+    position: fixed;
+    left: 1.6rem;
+    top: 1.6rem;
+  }
   .title {
     font-size: 2.8rem;
     line-height: 4.8rem;

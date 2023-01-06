@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkvue3ts"]=self["webpackChunkvue3ts"]||[]).push([[887],{1265:function(e,s,t){t.r(s),t.d(s,{default:function(){return l}});var n=t(3396);const u={class:"playgroundView"},a=(0,n._)("div",{class:"title"}," New Events ",-1),r=[a];var c=(0,n.aZ)({__name:"playgroundView",setup(e){return(e,s)=>((0,n.wg)(),(0,n.iD)("div",u,r))}});const i=c;var l=i}}]);
-//# sourceMappingURL=887.621af85e.js.map

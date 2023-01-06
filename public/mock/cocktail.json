@@ -37,7 +37,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "懒人的饮料",
-    "ingredient": []
+    "ingredient": [13, 15, 6, 14]
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "钱德勒小说中的离别滋味",
-    "ingredient": []
+    "ingredient": [16, 6, 5]
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "沉静的灵丹妙药，当之无愧的鸡尾酒之王",
-    "ingredient": []
+    "ingredient": [16, 17, 18]
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "口感跳跃欢快，为夏日带来一抹清凉",
-    "ingredient": []
+    "ingredient": [19, 20, 21]
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "大量的薄荷叶，和谦虚的态度",
-    "ingredient": []
+    "ingredient": [23, 22, 20, 7, 5]
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "大航海时代的历史遗产，酸味爱好者的天堂",
-    "ingredient": []
+    "ingredient": [24, 6, 5]
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "代表水瓶座的一款鸡尾酒",
-    "ingredient": []
+    "ingredient": [16, 23, 19, 1, 11, 6, 5, 14]
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "金酒三重奏，简单结构中的微妙复杂",
-    "ingredient": []
+    "ingredient": [16, 11, 6]
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "最简单也是最复杂的cocktail",
-    "ingredient": []
+    "ingredient": [16, 25, 6]
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "spirituosity": true,
     "icy": true,
     "motto": "点燃海滩派对激情的美味",
-    "ingredient": []
+    "ingredient": [8, 6, 7]
   },
   {
     "id": 15,
@@ -117,6 +117,6 @@
     "spirituosity": true,
     "icy": true,
     "motto": "一款很好跟天蝎座拉近距离的鸡尾酒",
-    "ingredient": []
+    "ingredient": [8, 23, 11, 6]
   }
 ]

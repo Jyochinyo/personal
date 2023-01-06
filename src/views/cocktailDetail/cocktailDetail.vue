@@ -84,6 +84,8 @@ const getIngredients = () => {
     margin-top: 1rem;
   }
   .cocktailPic {
+    width: 70vw;
+    height: 70vw;
     margin: 4rem 0;
     border-radius: 5px;
   }

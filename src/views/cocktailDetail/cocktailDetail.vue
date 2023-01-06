@@ -11,7 +11,7 @@
       <p class="ingredient">{{ item.cn }}</p>
       <p class="ingredient">{{ item.en }}</p>
     </div>
-    <div @click="router.back()" class="icon-arrow-left backIcon"></div>
+    <div @click="router.push({ name: 'cocktail' })" class="icon-arrow-left backIcon"></div>
   </div>
 </template>
 

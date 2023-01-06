@@ -118,5 +118,13 @@
     "icy": true,
     "motto": "一款很好跟天蝎座拉近距离的鸡尾酒",
     "ingredient": [8, 23, 11, 6]
+  },
+  {
+    "id": 16,
+    "name": "X.Y.Z",
+    "spirituosity": true,
+    "icy": true,
+    "motto": "在今夜结束，也在今夜开始",
+    "ingredient": [23, 11, 6]
   }
 ]

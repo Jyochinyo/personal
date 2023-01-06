@@ -94,7 +94,7 @@ const getIngredients = () => {
     width: 70vw;
     height: 70vw;
     margin: 4rem 0;
-    border-radius: 5px;
+    border-radius: 1rem;
   }
   .ingredients {
     margin-bottom: 1.2rem;

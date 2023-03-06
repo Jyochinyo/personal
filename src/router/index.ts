@@ -29,6 +29,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/cocktailInfo/:id',
     name: 'cocktailInfo',
     component: () => import('../views/cocktailDetail/cocktailDetail.vue')
+  },
+  {
+    path: '/shiftSchedule',
+    name: 'shiftSchedule',
+    component: () => import('../views/shiftSchedule/shiftSchedule.vue')
   }
 ]
 
